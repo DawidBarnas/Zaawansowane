@@ -6,20 +6,22 @@ int main()
 {
 	float b,x,a=0;
 	
-	cout<<"Obliczanie miejsc zerowych funkcji liniowej gdzie a musi byæ rozne od 0. \nPodaj a : ";
+	cout<<"Obliczanie miejsc zerowych funkcji liniowej. \nPodaj a : ";
 	cin>>a;
 	cout<<"Podaj b : ";
 	cin>>b;
-	if (a != 0)
+	if (a == 0 && b == 0)
+	{
+		cout<<"Funkcja ma nieskonczenie wiele miejsc zerowych.";
+	}else if (a == 0 && b != 0)
+	{
+		cout<<"Funkcja nie ma miejsc zerowych.";
+	}else
 	{
 	x=((-b)/a);
-	
 	cout<<"\nMiejsce zerowe wynosi : "<<x;
 	}
-	else 
-	{
-		cout<<"Niewlasciwe dane, a musi byc rozne od 0";	
-	}
+	
 	
 	return 0;
 }
