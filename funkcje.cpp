@@ -4,7 +4,7 @@
 #include <conio.h>
 #include<math.h>
 
-using namespace std;
+using namespace std;														
 
 int main()
 {
@@ -19,7 +19,10 @@ int main()
     cout<<"1.Funkcja liniowa\n";
     cout<<"2.Funkcja kwadratowa\n";
     cout<<"3.Postac kanoniczna funkcji kwadratowej\n";
-
+    cout<<"4.Postac iloczynowa funkcji kwadratowej\n";
+    cout<<"5.Postac Ogólna\n";
+    cout<<"6. Wyjscie\n";
+			
     cout<<"Wybierz:";
     wybor=getch();
     cout<<"\n\n";
@@ -29,7 +32,7 @@ int main()
         case '1':
             cout<<"Podaj b : ";
 	cin>>b;
-	cout<<"Podaj c : ";
+	cout<<"Podaj c : ";						
 	cin>>c;
 	if (b != 0)
 	if (b == 0 && c == 0)
@@ -79,7 +82,7 @@ int main()
 		}
 		else
 		{
-			cout<<endl<<"Brak miejsc zerowych ";
+			cout<<endl<<"Brak miejsc zerowych ";													
 		}
 	}
 	else
@@ -107,7 +110,7 @@ int main()
 	}
 
     }
-
+							
 	
 	return 0;
 
@@ -176,12 +179,44 @@ int main()
 
     }
 	
-    }
-    
 
+	case '4':
+	cout<<"Podaj a : ";
+	cin>>a;		
+    cout<<"Podaj b : ";
+	cin>>b;
+	
+	if(a == 0 && b == 0){
+    cout << "Podaj c: ", cin >> c;
+
+    if(a == 0 && c == 0){
+        cout << "Funkcja ma nieskonczenie wiele miejsc zerowych" << endl;
+    } else if(a == 0 && b != 0){
+    } else if(a == 0 && c != 0){
+        cout << "Funkcja nie ma miejsc zerowych" << endl;
+    } else{
+        x1 = -b / a;
+        x2 = -c / a;
+        cout << "Miejsce zerowe tej funkcji wynosi: " << x1 << " oraz " << x2 << endl;
+	break;
+	
+	case '5':
+    	{
+    		exit(0);
+    		
+    		break;
+		}
 	
 	
-	return 0;
+	case '6':
+    {
+	
+                break;																																				
+    }
+}
+}
+}
+ return 0;
 }
 
 
