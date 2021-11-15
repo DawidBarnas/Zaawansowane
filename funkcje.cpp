@@ -19,7 +19,9 @@ int main()
     cout<<"1.Funkcja liniowa\n";
     cout<<"2.Funkcja kwadratowa\n";
     cout<<"3.Postac kanoniczna funkcji kwadratowej\n";
+    cout<<"4.Postac iloczynowa funkcji kwadratowej\n";
     cout<<"5.Postac Ogólna\n";
+    cout<<"6. Wyjscie\n";
 			
     cout<<"Wybierz:";
     wybor=getch();
@@ -178,7 +180,7 @@ int main()
     }
 	
 
-	case '5':
+	case '4':
 	cout<<"Podaj a : ";
 	cin>>a;		
     cout<<"Podaj b : ";
@@ -206,15 +208,15 @@ int main()
 		}
 	
 	
-
-    }
+	case '6':
+    {
+	
                 break;																																				
     }
 }
-
-	
-	
-	return 0;
+}
+}
+ return 0;
 }
 
 
