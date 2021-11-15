@@ -177,6 +177,7 @@ int main()
 
     }
 	
+
 	case '5':
 	cout<<"Podaj a : ";
 	cin>>a;		
@@ -195,6 +196,17 @@ int main()
         x1 = -b / a;
         x2 = -c / a;
         cout << "Miejsce zerowe tej funkcji wynosi: " << x1 << " oraz " << x2 << endl;
+	break;
+	
+	case '5':
+    	{
+    		exit(0);
+    		
+    		break;
+		}
+	
+	
+
     }
                 break;																																				
     }
