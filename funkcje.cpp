@@ -1,28 +1,42 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
 int main()
 {
-	float b,x,a=0;
+	float b,x1,x2,a,c,delta;
+	double pierw;
 	
 	cout<<"Obliczanie miejsc zerowych funkcji liniowej. \nPodaj a : ";
 	cin>>a;
 	cout<<"Podaj b : ";
 	cin>>b;
-	if (a == 0 && b == 0)
+	cout<<"Podaj c : ";
+	cin>>c;
+	delta=(b*b)-(4*a*c);
+	cout<<"Delta wynosi: "<<delta;
+	pierw=sqrt(delta);
+	if(delta>0)
 	{
-		cout<<"Funkcja ma nieskonczenie wiele miejsc zerowych.";
-	}else if (a == 0 && b != 0)
-	{
-		cout<<"Funkcja nie ma miejsc zerowych.";
-	}else
-	{
-	x=((-b)/a);
-	cout<<"\nMiejsce zerowe wynosi : "<<x;
+		cout<<endl<<"Pierwiastek z delty wynosi: "<<pierw;
+	x1=(-b+pierw)/(2*a);
+	x2=(-b-pierw)/(2*a);
+	cout<<endl<<"Miejsca zerowe: "<<endl;
+	cout<<x1;
+	cout<<endl<<x2;
+    }   
+    else if(delta==0)
+    {
+    x1=-b/(a*a);
+    cout<<endl<<"Miejsce zerowe: "<<endl;
+    cout<<x1;
 	}
-	
+	else
+	{
+		cout<<endl<<"Brak miejsc zerowych ";
+	}
+
 	
 	return 0;
-	//dsdsadsadas
 }
