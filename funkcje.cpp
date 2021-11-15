@@ -1,14 +1,56 @@
 #include <iostream>
 #include <math.h>
+#include <cstdlib>
+#include <conio.h>
+#include<math.h>
 
 using namespace std;
 
 int main()
 {
+
 	float b,x1,x2,a,c,delta,y;
 	double pierw;
 	
-	cout<<"Obliczanie miejsc zerowych funkcji kwadratowej gdzie a musi byc rozne od 0. \nPodaj a : ";
+    int wybor = 0;
+
+
+    cout<<"**MENU**\n";
+    cout<<"1.Funkcja liniowa\n";
+    cout<<"2.Funkcja kwadratowa\n";
+
+    cout<<"Wybierz:";
+    wybor=getch();
+    cout<<"\n\n";
+
+    switch ( wybor ) 
+    {
+        case '1':
+            cout<<"Podaj b : ";
+	cin>>b;
+	cout<<"Podaj c : ";
+	cin>>c;
+	if (b != 0)
+	if (b == 0 && c == 0)
+	{
+		cout<<"Funkcja ma nieskonczenie wiele miejsc zerowych.";
+	}else if (b == 0 && c != 0)
+	{
+		cout<<"Funkcja nie ma miejsc zerowych.";
+	}else
+	{
+	y=((-c)/b);
+
+	cout<<"\nMiejsce zerowe wynosi : "<<y;
+	}
+	else 
+	{
+		cout<<"Niewlasciwe dane, a musi byc rozne od 0";	
+	}
+                break;
+        case '2':
+            
+            	cout<<"Obliczanie miejsc zerowych funkcji kwadratowej gdzie a musi byc rozne od 0. \nPodaj a : ";
 	cin>>a;
 	if(a!=0)
 	{
@@ -62,8 +104,21 @@ int main()
 	{
 		cout<<"Niewlasciwe dane, a musi byc rozne od 0";	
 	}
+
     }
 
 	
 	return 0;
+
+               
+            break;
+
+    }
+    
+
+	
+	
+	return 0;
 }
+
+
